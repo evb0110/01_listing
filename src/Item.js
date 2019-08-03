@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Item = ({ color, item }) => (
   <figure className={`snip1171 ${color}`}>
@@ -11,5 +12,14 @@ const Item = ({ color, item }) => (
     </figcaption>
   </figure>
 );
+
+Item.propTypes = {
+  color: PropTypes.string,
+  item: PropTypes.shape({
+    pic: PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string,
+  }),
+};
 
 export default Item;
