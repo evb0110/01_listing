@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Item from './Item';
 import './css/main.css';
@@ -13,5 +14,9 @@ const App = ({ items }) => (
     ))}
   </main>
 );
+
+App.propTypes = {
+  items: PropTypes.array,
+};
 
 export default App;
